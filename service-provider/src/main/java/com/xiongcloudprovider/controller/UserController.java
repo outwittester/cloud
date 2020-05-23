@@ -16,7 +16,7 @@ public class UserController {
 
     @GetMapping("{id}")
     public User queryUserbyId(@PathVariable("id") Long id){
-        System.out.println("84 get called");
+        System.out.println("83 get called");
         return this.userService.queryUserById(id);
     }
 }
