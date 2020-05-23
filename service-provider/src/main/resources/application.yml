@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8084
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/leyou?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=EST
@@ -9,7 +9,7 @@ spring:
     name: service-provider
 
 mybatis:
-  type-aliases-package: com.example.service.pojo
+  type-aliases-package: com.xiongcloudprovider.model
 eureka:
   client:
     service-url:
