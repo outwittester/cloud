@@ -1,0 +1,15 @@
+server:
+  port: 10086
+
+spring:
+  application:
+    name: service-eureka
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka/
+#  剔除无效服务 and 开发去除保护机制
+#  server:
+#    eviction-interval-timer-in-ms: 10000
+#    enable-self-preservation: false
