@@ -10,3 +10,13 @@ eureka:
     service-url:
       defaultZone: http://localhost:10086/eureka
     registry-fetch-interval-seconds: 10
+
+
+#default service downgrade time is 1 second , below is to change to 5 seconds
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
