@@ -18,10 +18,12 @@ public class UserController {
     private RestTemplate restTemplate;
 
 
-
     @GetMapping("{id}")
     @HystrixCommand
     public String queryUserById(@PathVariable("id") Long id) {
+        if (id == 1) {
+            throw new RuntimeException();
+        }
         return this.restTemplate.getForObject("http://service-provider/user/" + id, String.class);
     }
 

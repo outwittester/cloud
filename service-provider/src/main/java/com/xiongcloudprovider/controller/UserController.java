@@ -16,11 +16,6 @@ public class UserController {
 
     @GetMapping("{id}")
     public User queryUserbyId(@PathVariable("id") Long id){
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         System.out.println("84 get called");
         return this.userService.queryUserById(id);
     }
