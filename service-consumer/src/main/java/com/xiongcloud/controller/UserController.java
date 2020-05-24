@@ -1,6 +1,6 @@
 package com.xiongcloud.controller;
 
-import com.xiongcloud.model.User;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,8 +18,14 @@ public class UserController {
 
 
     @GetMapping("{id}")
-    public User queryUserById(@PathVariable("id") Long id) {
-        return this.restTemplate.getForObject("http://service-provider/user/" + id, User.class);
+    @HystrixCommand(fallbackMethod = "queryUserByIdFallback")
+    public String queryUserById(@PathVariable("id") Long id) {
+        return this.restTemplate.getForObject("http://service-provider/user/" + id, String.class);
+    }
+
+    //broker method return type must be the same as the method to be broken
+    public String queryUserByIdFallback(Long id) {
+        return "busy server, try later";
     }
 
 }
