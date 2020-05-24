@@ -19,10 +19,6 @@
         <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
     </properties>
 
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-    </dependency>
 
     <dependencies>
         <dependency>
