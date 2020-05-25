@@ -1,0 +1,22 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: service-zuul
+#    分发到服务方
+#zuul:
+#  routes:
+#    service-provider:
+#      path: /provider/**
+#      serviceId: service-provider
+#      url: http://localhost:8084
+#   url is hard coded thus no load balance
+zuul:
+  routes:
+    service-provider:
+      path: /provider/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
