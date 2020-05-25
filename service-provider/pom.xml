@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xiongcloudprovider</groupId>
-    <artifactId>service-consumer</artifactId>
+    <artifactId>service-providerr</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-consumer</name>
+    <name>service-provider</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
