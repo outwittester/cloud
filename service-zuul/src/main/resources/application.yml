@@ -15,8 +15,17 @@ zuul:
   routes:
     service-provider:
       path: /provider/**
-
+  prefix: /api
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:10086/eureka
+
+#circuit breaker default timeout is 1 s, better change to more a few seconds
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
