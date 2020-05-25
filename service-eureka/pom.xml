@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.xiongcloud</groupId>
-    <artifactId>service-consumer</artifactId>
+    <artifactId>service-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-consumer</name>
+    <name>service-eureka</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
